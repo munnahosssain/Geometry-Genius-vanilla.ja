@@ -8,18 +8,6 @@ function userInput(elementId) {
     let elementValueById = document.getElementById(elementId);
     const elementValue = parseFloat(elementValueById.value);
     elementValueById.value = '';
-    // if (elementValue < 0) {
-    //     alert('pleaseEnter a valid input');
-    //     return false;
-    // }
-    // if (elementValue === 'string') {
-    //     alert('pleaseEnter a valid input');
-    //     return false;
-    // }
-    // else {
-    //     return elementValue.innerText = value;
-    //     return elementValue;
-    // }
     return elementValue;
 }
 
