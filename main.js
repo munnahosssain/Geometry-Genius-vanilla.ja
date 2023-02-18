@@ -12,15 +12,24 @@ for (const colorRandom of element) {
 document.getElementById('triangle-calculation').addEventListener('click', function () {
     const resultBase = userInput('triangle-base');
     const resultHeight = userInput('triangle-height');
+    if (isNaN(resultBase) || isNaN(resultHeight) || resultBase < 0 || resultHeight < 0) {
+        return alert("Please enter valid number");
+    }
+    else {
+        const result = (.5 * resultBase * resultHeight).toFixed(2);
+        setUserValueById('triangle-display', result);
+        setUserValueByDisplay('triangle');
+    }
 
-    const result = (.5 * resultBase * resultHeight).toFixed(2);
-    setUserValueById('triangle-display', result);
-    setUserValueByDisplay('triangle');
 });
 
 document.getElementById('rectangle-calculation').addEventListener('click', function () {
     const resultBase = userInput('rectangle-width');
     const resultHeight = userInput('rectangle-length');
+
+    if (isNaN(resultBase) || isNaN(resultHeight) || resultBase < 0 || resultHeight < 0) {
+        return alert("Please enter valid number");
+    }
 
     const result = (resultBase * resultHeight);
     setUserValueById('rectangle-display', result);
