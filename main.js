@@ -19,104 +19,58 @@ document.getElementById('random-colors').addEventListener("mouseenter", function
 //     event.target.style.fill = randomColor();
 // });
 
-function userInput(elementId) {
-    let triangleHeight = document.getElementById(elementId);
-    const triangleHeightElement = parseFloat(triangleHeight.value);
-
-
-
-    triangleHeight = '';
-
-    const display = document.getElementById('triangle');
-    display.style.display = 'block';
-}
-
-function setDisplayById(elementId, value) {
-    const triangleDisplay = document.getElementById(elementId);
-    triangleDisplay.innerText = value;
-}
-
-
 document.getElementById('triangle-calculation').addEventListener('click', function () {
     const resultBase = userInput('triangle-base');
     const resultHeight = userInput('triangle-height');
+
     const result = (.5 * resultBase * resultHeight);
-    setDisplayById('triangle-display', result);
-    console.log(result);
+    setUserValueById('triangle-display', result);
+    setUserValueByDisplay('triangle');
 });
 
 document.getElementById('rectangle-calculation').addEventListener('click', function () {
-    const triangleBase = document.getElementById('rectangle-width');
-    const triangleBaseElement = parseFloat(triangleBase.value);
+    const resultBase = userInput('rectangle-width');
+    const resultHeight = userInput('rectangle-length');
 
-    const triangleHeight = document.getElementById('rectangle-length');
-    const triangleHeightElement = parseFloat(triangleHeight.value);
-
-    result = (triangleBaseElement * triangleHeightElement);
-    const triangleDisplay = document.getElementById('rectangle-display');
-    triangleDisplay.innerText = result;
-
-    const display = document.getElementById('rectangle');
-    display.style.display = 'block';
+    const result = (resultBase * resultHeight);
+    setUserValueById('rectangle-display', result);
+    setUserValueByDisplay('rectangle');
 
 });
 
 document.getElementById('parallelogram-calculation').addEventListener('click', function () {
-    const triangleBase = document.getElementById('parallelogram-base');
-    const triangleBaseElement = parseFloat(triangleBase.innerText);
+    const parallelogramBase = constValue('parallelogram-base');
+    const parallelogramHeight = constValue('parallelogram-height');
 
-    const triangleHeight = document.getElementById('parallelogram-height');
-    const triangleHeightElement = parseFloat(triangleHeight.innerText);
-
-    result = (triangleBaseElement * triangleHeightElement);
-    const triangleDisplay = document.getElementById('parallelogram-display');
-    triangleDisplay.innerText = result;
-
-    const display = document.getElementById('parallelogram');
-    display.style.display = 'block';
+    result = (parallelogramBase * parallelogramHeight);
+    setConstValueById('parallelogram-display', result);
+    setConstValueByDisplay('parallelogram');
 });
 
 document.getElementById('rhombus-calculation').addEventListener('click', function () {
-    const triangleBase = document.getElementById('diagonal-one');
-    const triangleBaseElement = parseFloat(triangleBase.innerText);
+    const triangleBase = constValue('diagonal-one');
+    const triangleHeight = constValue('diagonal-two');
 
-    const triangleHeight = document.getElementById('diagonal-two');
-    const triangleHeightElement = parseFloat(triangleHeight.innerText);
-
-    result = (.5 * triangleBaseElement * triangleHeightElement);
-    const triangleDisplay = document.getElementById('rhombus-display');
-    triangleDisplay.innerText = result;
-
-    const display = document.getElementById('rhombus');
-    display.style.display = 'block';
+    result = (.5 * triangleBase * triangleHeight);
+    setConstValueById('rhombus-display', result);
+    setConstValueByDisplay('rhombus');
 });
 
 document.getElementById('pentagon-calculation').addEventListener('click', function () {
-    const triangleBase = document.getElementById('pentagon-perimeter');
-    const triangleBaseElement = parseFloat(triangleBase.innerText);
+    const triangleBase = constValue('pentagon-perimeter');
+    const triangleHeight = constValue('pentagon-base');
 
-    const triangleHeight = document.getElementById('pentagon-base');
-    const triangleHeightElement = parseFloat(triangleHeight.innerText);
-
-    result = (triangleBaseElement * triangleHeightElement);
-    const triangleDisplay = document.getElementById('pentagon-display');
-    triangleDisplay.innerText = result;
-
-    const display = document.getElementById('pentagon');
-    display.style.display = 'block';
+    result = (triangleBase * triangleHeight);
+    setConstValueById('pentagon-display', result);
+    setConstValueByDisplay('pentagon');
 });
 
 document.getElementById('ellipse-calculation').addEventListener('click', function () {
-    const triangleBase = document.getElementById('ellipse-area');
-    const triangleBaseElement = parseFloat(triangleBase.innerText);
+    const triangleBase = constValue('ellipse-area');
+    const triangleHeight = constValue('ellipse-base');
 
-    const triangleHeight = document.getElementById('ellipse-base');
-    const triangleHeightElement = parseFloat(triangleHeight.innerText);
+    result = (3.15 * triangleBase * triangleHeight);
+    setConstValueById('ellipse-display', result);
 
-    result = (3.15 * triangleBaseElement * triangleHeightElement);
-    const triangleDisplay = document.getElementById('ellipse-display');
-    triangleDisplay.innerText = result;
-
-    const display = document.getElementById('ellipse');
-    display.style.display = 'block';
+    setConstValueByDisplay('ellipse');
 });
