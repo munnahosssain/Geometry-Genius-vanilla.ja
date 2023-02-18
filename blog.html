@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html data-theme="aqua" />
 
 <head>
     <meta charset="UTF-8">
@@ -11,40 +12,64 @@
 </head>
 
 <body>
-    <div class="grid grid-cols-2 m-48">
-        <div>
+    <div class="grid lg:grid-cols-2 lg:m-48">
+        <div class="mr-5">
             <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
                 <div class="collapse-title text-xl font-medium">
-                    Focus me to see content
+                    What is DOM and what is the purpose of DOM?
                 </div>
                 <div class="collapse-content">
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                    <p>DOM stands for Document Object Model. It is a programming interface that allows us to create,
+                        change, or remove elements from the document. We can also add events to these elements to make
+                        our page more dynamic.</p>
+                    <p>By manipulating the DOM, you have infinite possibilities. You can create applications that update
+                        the data of the page without needing a refresh. Also, you can create applications that are
+                        customizable by the user and then change the layout of the page without a refresh. You can drag,
+                        move, and delete elements.</p>
                 </div>
             </div>
-            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+            <div tabindex="0" class="mt-6 collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
                 <div class="collapse-title text-xl font-medium">
-                    Focus me to see content
+                    How will you select HTML elements using DOM? Name the DOM methods.
                 </div>
                 <div class="collapse-content">
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                    <p>Elements in an HTML document are available directly as document properties. For example, the
+                        <'html'> element can be accessed with document.documentElement property, whereas the
+                            <'head'> element can be accessed with document.head property, and the
+                                <'body'> element can be accessed with document.body property.
+                    </p><br>
+                    <p>Elements by ID: <br>
+                        You can select an element based on its unique ID with the getElementById() method. This is the
+                        easiest way to find an HTML element in the DOM tree.
+                    </p><br>
+                    <p>Elements by Class Name: <br>
+                        Similarly, you can use the getElementsByClassName() method to select all the elements having
+                        specific class names. This method returns an array-like object of all child elements which have
+                        all of the given class names. Let's check out the following example:
+                    </p>
                 </div>
             </div>
         </div>
         <div>
             <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
                 <div class="collapse-title text-xl font-medium">
-                    Focus me to see content
+                    What is event bubble?
                 </div>
                 <div class="collapse-content">
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                    <p>Event Bubbling is a concept in the DOM (Document Object Model). It happens when an element
+                        receives an event, and that event bubbles up (or you can say is transmitted or propagated) to
+                        its parent and ancestor elements in the DOM tree until it gets to the root element.</p>
                 </div>
             </div>
-            <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+            <div tabindex="0" class="mt-6 collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
                 <div class="collapse-title text-xl font-medium">
-                    Focus me to see content
+                    What is a callback function and why will you use it?
                 </div>
                 <div class="collapse-content">
-                    <p>tabindex="0" attribute is necessary to make the div focusable</p>
+                    <p>In JavaScript, functions are objects. We pass objects to functions as parameters.</p>
+                    <p>JavaScript runs code sequentially in top-down order. However, there are some cases that code runs
+                        (or must run) after something else happens and also not sequentially. This is called
+                        asynchronous programming.</p>
                 </div>
             </div>
         </div>
