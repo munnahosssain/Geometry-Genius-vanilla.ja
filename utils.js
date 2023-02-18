@@ -42,16 +42,16 @@ function constValue(elementId) {
     return elementValue;
 }
 
-function setConstValueById(elementId, value,) {
-    const elementValueById = document.getElementById(elementId);
-    return elementValueById.innerText = value;
-}
+// function setConstValueById(elementId, value,) {
+//     const elementValueById = document.getElementById(elementId);
+//     return elementValueById.innerText = value;
+// }
 
 
-function setConstValueByDisplay(displayId) {
-    const displayValue = document.getElementById(displayId);
-    displayValue.style.display = 'block';
-}
+// function setConstValueByDisplay(displayId) {
+//     const displayValue = document.getElementById(displayId);
+//     displayValue.style.display = 'block';
+// }
 
 // Background color change when Entire Mouse on the cart.
 function randomColor() {
@@ -60,4 +60,21 @@ function randomColor() {
         color.push(Math.floor(Math.random() * 256));
     }
     return 'rgb(' + color.join(', ') + ')';
+}
+
+// dynamic numbers
+
+function displayData(name, totalValue) {
+    const container = document.getElementById("table-container");
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${serial}</td>
+      <td>${name}</td>
+      <td>${totalValue}</td>
+      <td>
+      <button class="bg-[#1090D8] rounded p-2 text-white text-xs">
+      Convert to m<sup>2</sup></button>
+      </td>
+    `;
+    container.appendChild(tr);
 }

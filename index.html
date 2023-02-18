@@ -37,7 +37,7 @@
                         <img src="images/triangle.png" alt="Triangle" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title text-3xl">Triangle</h2>
+                        <h2 id="name-triangle" class="card-title text-3xl">Triangle</h2>
                         <p>Area (A) = 0.5 X b X h</p>
                         <div>
                             <input id="triangle-base" class="px-3 py-1 bg-base-300" type="text" size=3 placeholder="b">
@@ -53,7 +53,7 @@
                         <img src="images/rectangle.png" alt="Rectangle" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title text-3xl">Rectangle</h2>
+                        <h2 id="name-rectangle" class="card-title text-3xl">Rectangle</h2>
                         <p>Area (A) = W X I</p>
                         <div>
                             <input id="rectangle-width" class="px-3 py-1 bg-base-300" type="text" size=3
@@ -69,7 +69,7 @@
                         <img src="images/parallelogram.png" alt="Parallelogram" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title text-3xl">Parallelogram</h2>
+                        <h2 id="name-parallelogram" class="card-title text-3xl">Parallelogram</h2>
                         <p>Area (A) = b X h</p>
                         <p>b=<span id="parallelogram-base">10</span>cm, h=<span id="parallelogram-height">12</span>cm
                         </p>
@@ -81,7 +81,7 @@
                         <img src="images/rhombus.png" alt="Rhombus" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title text-3xl">Rhombus</h2>
+                        <h2 id="name-rhombus" class="card-title text-3xl">Rhombus</h2>
                         <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>1</sub></p>
                         <p>d<sub>1</sub> = <span id="diagonal-one">16</span>cm, d<sub>2</sub> =
                             <span id="diagonal-two">8</span>cm
@@ -94,7 +94,7 @@
                         <img src="images/pentagon.png" alt="Pentagon" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title text-3xl">Pentagon</h2>
+                        <h2 id="name-pentagon" class="card-title text-3xl">Pentagon</h2>
                         <p>Area (A) = p X b</p>
                         <p>p = <span id="pentagon-perimeter">6</span>cm, b = <span id="pentagon-base">10</span>cm</p>
                         <button id="pentagon-calculation" class="btn btn-wide bg-[#1090D8]">Calculate</button>
@@ -105,7 +105,7 @@
                         <img src="images/ellipse.png" alt="Ellipse" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                        <h2 class="card-title text-3xl">Ellipse</h2>
+                        <h2 id="name-ellipse" class="card-title text-3xl">Ellipse</h2>
                         <p>Area (A) = πab</p>
                         <p>a= <span id="ellipse-area">10</span>cm, b= <span id="ellipse-base">4</span>cm</p>
                         <button id="ellipse-calculation" class="btn btn-wide bg-[#1090D8]">Calculate</button>
@@ -116,43 +116,8 @@
                 <h1 class="text-3xl font-bold text-center border-inherit border-b-4 mb-6">Area Calculation</h1>
                 <div class="overflow-x-auto">
                     <table class="table w-full">
-                        <tbody>
-                            <tr id="triangle" class="hidden">
-                                <th>{$}</th>
-                                <td>Triangle</td>
-                                <td><span id="triangle-display"></span>cm<sup>2</sup></td>
-                                <td class="bg-[#1090D8] text-white">Convert to m<sup>2</sup></td>
-                            </tr>
-                            <tr id="rectangle" class="hidden">
-                                <th>{#}</th>
-                                <td>Rectangle</td>
-                                <td><span id="rectangle-display"></span>cm<sup>2</sup></td>
-                                <td class="bg-[#1090D8] text-white">Convert to m<sup>2</sup></td>
-                            </tr>
-                            <tr id="parallelogram" class="hidden">
-                                <th>3</th>
-                                <td>Parallelogram</td>
-                                <td><span id="parallelogram-display"></span>cm<sup>2</sup></td>
-                                <td class="bg-[#1090D8] text-white">Convert to m<sup>2</sup></td>
-                            </tr>
-                            <tr id="rhombus" class="hidden">
-                                <th>4</th>
-                                <td>Rhombus</td>
-                                <td><span id="rhombus-display"></span>cm<sup>2</sup></td>
-                                <td class="bg-[#1090D8] text-white py-0">Convert to m<sup>2</sup></td>
-                            </tr>
-                            <tr id="pentagon" class="hidden">
-                                <th>5</th>
-                                <td>Pentagon</td>
-                                <td><span id="pentagon-display"></span>cm<sup>2</sup></td>
-                                <td class="bg-[#1090D8] text-white">Convert to m<sup>2</sup></td>
-                            </tr>
-                            <tr id="ellipse" class="hidden">
-                                <th>6</th>
-                                <td>Ellipse</td>
-                                <td><span id="ellipse-display"></span>cm<sup>2</sup></td>
-                                <td class="bg-[#1090D8] text-white">Convert to m<sup>2</sup></td>
-                            </tr>
+                        <tbody id="table-container">
+
                         </tbody>
                     </table>
                 </div>
