@@ -49,7 +49,7 @@ document.getElementById('parallelogram-calculation').addEventListener('click', f
 
 document.getElementById('rhombus-calculation').addEventListener('click', function () {
     serial += 1;
-    const titleName = document.getElementById("name-diagonal").innerText;
+    const titleName = document.getElementById("name-rhombus").innerText;
     const triangleBase = constValue('diagonal-one');
     const triangleHeight = constValue('diagonal-two');
 
